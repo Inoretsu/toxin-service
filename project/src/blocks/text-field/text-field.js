@@ -1,7 +1,8 @@
-import 'jquery.maskedinput/src/jquery.maskedinput';
+import Inputmask from "inputmask";
 
 
 $(function () {
-	$("[data-maskType='data']").mask("99.99.9999", {placeholder: "ДД.ММ.ГГГГ" });
-	alert('nya');
+	let input = $("[data-maskType='data']");
+	input.attr('placeholder', 'ДД.ММ.ГГГГ');
+	Inputmask("99.99.9999").mask(input.get(0));
 });

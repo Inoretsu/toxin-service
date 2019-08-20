@@ -40,7 +40,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "jquery": "^3.4.1",
-    "jquery.maskedinput": "^1.4.1"
+    "inputmask": "^5.0.0-beta.235",
+    "jquery": "^3.4.1"
   }
 }

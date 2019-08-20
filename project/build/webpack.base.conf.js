@@ -108,7 +108,8 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: "jquery/dist/jquery.min.js",
       jQuery: "jquery/dist/jquery.min.js",
-      "window.jQuery": "jquery/dist/jquery.min.js"
+      "window.jQuery": "jquery/dist/jquery.min.js",
+      "window.$": "jquery/dist/jquery.min.js"
     }),
 
     ...PAGES.map(page => new HtmlWebpackPlugin({
