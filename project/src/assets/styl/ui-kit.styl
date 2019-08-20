@@ -1,0 +1,66 @@
+.uikit-section
+	padding: 80px 0
+	color: $dark100
+
+
+.colors
+	col()
+	size(6)
+
+.color
+	margin-bottom: 20px
+	display: flex
+	align-items: center
+	&__square
+		width: 70px
+		height: 70px
+		border-radius: 6px
+		margin-right: 40px
+		&_dark100
+			background-color: $dark100
+		&_dark75
+			background-color: $dark75
+		&_dark50
+			background-color: $dark50
+		&_dark25
+			background-color: $dark25
+		&_dark5
+			background-color: $dark5
+		&_purple
+			background-color: $purple
+		&_green
+			background-color: $green
+	&__descr
+		font-family: Quicksand
+		font-weight: bold
+		font-size: 19px
+		line-height: 29px;
+	&__code
+		font-weight: normal
+
+.fonts
+	col()
+	size(6)
+
+.font
+	display: flex
+	margin-bottom: 50px
+	&_h1
+		$fontH1()
+	&_h2
+		$fontH2()
+	&_h3
+		$fontH3()
+	&_body
+		$fontBODY()
+	&__attr
+		font-family: Montserrat
+		color: $dark25
+		text-align: right 
+		width: 40px
+		font-weight: normal
+	&__descr
+		margin-left: 30px
+		max-width: 336px
+	
+	

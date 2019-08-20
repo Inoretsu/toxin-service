@@ -1,0 +1,5 @@
+
+mixin text-field(label='Text Field', type='text', placeholder='Email', name='', value='', maskType='')
+	.text-field
+		label.text-field__label=label
+			input.text-field__input#data(type=type, placeholder=placeholder, name=name, value=value, data-maskType=maskType)&attributes(attributes)

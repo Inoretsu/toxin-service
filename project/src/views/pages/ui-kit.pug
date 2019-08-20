@@ -1,0 +1,69 @@
+extends ../layout/layout-uikit
+include ../../blocks/text-field/text-field
+
+block variables
+	- var description = 'UI Kit';
+
+block content
+	section.colors-fonts.uikit-section
+		.wrapper
+			.row
+				.colors
+					.color
+						.color__square.color__square_dark100
+						.color__descr
+							p.color__name Dark Shade 100%
+							p.color__code #1F2041
+					.color
+						.color__square.color__square_dark75
+						.color__descr
+							p.color__name Dark Shade 75%
+							p.color__code #1F2041
+					.color
+						.color__square.color__square_dark50
+						.color__descr
+							p.color__name Dark Shade 50%
+							p.color__code #1F2041
+					.color
+						.color__square.color__square_dark25
+						.color__descr
+							p.color__name Dark Shade 25%
+							p.color__code #1F2041
+					.color
+						.color__square.color__square_dark5
+						.color__descr
+							p.color__name Dark Shade 5%
+							p.color__code #1F2041
+					.color
+						.color__square.color__square_purple
+						.color__descr
+							p.color__name Purple
+							p.color__code #BC9CFF
+					.color
+						.color__square.color__square_green
+						.color__descr
+							p.color__name Green
+							p.color__code #6FCF97
+	
+				.fonts
+					.font.font_h1
+						.font__attr H1
+						p.font__descr This one is the sub-section or widget title
+					.font.font_h2
+						.font__attr H2
+						p.font__descr Next one is the item title inside widgets
+					.font.font_h3
+						.font__attr H3
+						p.font__descr This is a label or CTA text
+					.font.font_body
+						.font__attr Body
+						p.font__descr This is the body text which is used for most of the design, like paragraphs, lists, etc.
+
+	section.form-elems.uikit-section
+		.wrapper
+			.row
+				.form-elems__col
+					.text-field-wrapper
+						+text-field('Text Field', 'text', '', 'uikit-data', '', 'data')
+				.form-elems__col
+				.form-elems__col
