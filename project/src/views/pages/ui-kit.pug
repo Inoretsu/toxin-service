@@ -1,10 +1,13 @@
 extends ../layout/layout-uikit
-include ../../blocks/text-field/text-field
-
 block variables
 	- var description = 'UI Kit';
 
 block content
+
+	include ../../blocks/text-field/text-field
+	include ../../blocks/dropdown/dropdown
+	include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
+
 	section.colors-fonts.uikit-section
 		.wrapper
 			.row
@@ -67,5 +70,12 @@ block content
 						+text-field('Text Field', 'email', '', 'uikit-mail', '')
 					.data-field-wrapper
 						+text-field('Text Field', 'text', '', 'uikit-data', '', 'data')
+					.dropdown-wrapper
+						+dropdown-peopleCounter('Dropdown')
+					.dropdown-wrapper
+						+dropdown-roomsCounter('Dropdown')
+					.checkbox-list-wrapper
+						+expandable-checkbox-list('Expandable checkbox list', ['Завтрак', 'Письменный стол',
+						'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь'])
 				.form-elems__col
 				.form-elems__col

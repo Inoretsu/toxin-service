@@ -1,0 +1,57 @@
+
+//- mixin dropdown(label, placeholder, list)
+//- 	.dropdown
+//- 		.dropdown__label=label
+//- 		.dropdown__main
+//- 			.dropdown__main-text=placeholder
+//- 			.dropdown__arrow
+//- 				img.dropdown__arrow-svg(src='../../assets/img/dropdown_arrow.svg', alt='Dropdown arrow')
+//- 		ul.dropdown__list
+//- 			each item in list
+//- 				li(data-dropdown-category=item)
+//- 					p(src='#')= item
+//- 					.dropdown__counter
+//- 						button.dropdown__btn.dropdown__btn_circle.dropdown__btn_minus.dropdown__btn_circle_inactive(type='button') -
+//- 						span.dropdown__counter-num(data-dropdown-counter=0) 0
+//- 						button.dropdown__btn.dropdown__btn_circle.dropdown__btn_plus(type='button') +
+
+
+mixin dropdown-peopleCounter(label)
+	.dropdown.dropdown_peopleCounter
+		.dropdown__label=label
+		.dropdown__main
+			.dropdown__main-text Сколько гостей
+			.dropdown__arrow
+				img.dropdown__arrow-svg(src='../../assets/img/dropdown_arrow.svg', alt='Dropdown arrow')
+		.dropdown__list
+			ul
+				each item in ['взрослые', 'дети', 'младенцы']
+					li(data-dropdown-category=item)
+						p(src='#')= item
+						.dropdown__counter
+							button.dropdown__btn.dropdown__btn_circle.dropdown__btn_minus.dropdown__btn_circle_inactive(type='button') -
+							span.dropdown__counter-num(data-dropdown-counter=0) 0
+							button.dropdown__btn.dropdown__btn_circle.dropdown__btn_plus(type='button') +
+			.dropdown__main-btns
+				button.dropdown__btn.dropdown__btn_clear очистить
+				button.dropdown__btn.dropdown__btn_apply применить
+			
+
+mixin dropdown-roomsCounter(label, defNum = 2)
+	.dropdown.dropdown__roomsCounter
+		.dropdown__label=label
+		.dropdown__main
+			.dropdown__main-text #{defNum} спальни, #{defNum} кровати...
+			.dropdown__arrow
+				img.dropdown__arrow-svg(src='../../assets/img/dropdown_arrow.svg', alt='Dropdown arrow')
+		.dropdown__list
+			ul
+				each item in ['спальни', 'кровати', 'ванные комнаты']
+					li(data-dropdown-category=item)
+						p(src='#')= item
+						.dropdown__counter
+							button.dropdown__btn.dropdown__btn_circle.dropdown__btn_minus.dropdown__btn_circle_inactive(type='button') -
+							span.dropdown__counter-num(data-dropdown-counter=defNum) #{defNum}
+							button.dropdown__btn.dropdown__btn_circle.dropdown__btn_plus(type='button') +
+			
+	

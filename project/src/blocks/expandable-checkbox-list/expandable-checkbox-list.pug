@@ -1,0 +1,12 @@
+mixin expandable-checkbox-list(label, list)
+	.expandable-checkbox-list
+		.expandable-checkbox-list__title-block
+			p.expandable-checkbox-list__title=label
+			.expandable-checkbox-list__arrow-wrap
+				img.expandable-checkbox-list__arrow-svg(src='../../assets/img/list_arrow.svg', alt='List arrow')
+		ul.expandable-checkbox-list__list-wrapper
+			each item in list
+				li.expandable-checkbox-list__list-item
+					label.expandable-checkbox-list__label-item
+						input.expandable-checkbox-list__input-item(type='checkbox' name=item)
+						| #{item}

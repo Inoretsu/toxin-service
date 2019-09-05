@@ -1,0 +1,75 @@
+.dropdown
+	width: 100%
+	&__label
+		$fontH3()
+	&__main
+		margin-top: 5px
+		width: 100%
+		border-radius: 4px 4px 0px 0px
+		border: 1px solid $dark25
+		padding: 11px 15px 10px 
+		display: flex
+		justify-content: space-between
+		$fontBODY()
+		cursor: pointer
+		transition: all 1s ease
+		&_active
+			border-color: $dark50
+		&:hover, &:focus, &:active
+			border-color: $dark50
+	&__list
+		width: 100%
+		border-radius: 0px 0px 4px 4px
+		border: 1px solid $dark50
+		border-top: none
+		padding: 11px 15px 13px
+		display: none
+		$fontH3()
+	li
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-top: 7px
+	&__counter
+		display: flex
+		align-items: center
+	&__btn_circle
+		width: 30px
+		height: 30px
+		display: flex
+		justify-content: center
+		align-items: center
+		border: 1px solid $dark25
+		border-radius: 15px
+		color: $dark50
+		font-size: 18px
+		transition: all 1s ease
+		&:hover
+			border-color: $dark50
+		&_inactive
+			color: $dark5
+			border-color: $dark5
+			cursor: default
+			&:hover
+				border-color: $dark5
+	&__btn_minus
+		padding-bottom: 13px
+	&__counter-num
+		text-align: center
+		width: 29px
+		
+	&__main-btns
+		padding-top: 19px
+		display: flex
+		justify-content: space-between
+		button
+			$fontH3()
+			&.dropdown__btn_clear
+				color: $dark50
+				display: none
+			&.dropdown__btn_apply
+				color: $purple
+				margin: 0 0 0 auto 
+	
+
+	
