@@ -9,4 +9,6 @@ mixin expandable-checkbox-list(label, list)
 				li.expandable-checkbox-list__list-item
 					label.expandable-checkbox-list__label-item
 						input.expandable-checkbox-list__input-item(type='checkbox' name=item)
-						| #{item}
+						span.expandable-checkbox-list__mark-item
+						span.expandable-checkbox-list__content-item=item
+						

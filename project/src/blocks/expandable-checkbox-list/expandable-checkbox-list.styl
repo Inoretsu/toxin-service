@@ -4,9 +4,62 @@
 		display: flex
 		justify-content: space-between
 		width: 100%
+		margin-bottom: 5px
+		cursor: pointer
 	&__title
 		$fontH3()
 	&__arrow-wrap
 		width: 44px
 		display: flex
 		justify-content: center
+	&__arrow-svg
+		transition: all 1s ease
+	&__arrow-svg_active
+		transform: rotate(180deg)
+	&__list-wrapper
+		display: none
+	&__list-item
+		margin-top: 11px
+	&__label-item
+		cursor: pointer
+		margin-top: 9px
+		color: $dark50
+		font-size: 14px
+	&__content-item
+		vertical-align: middle
+	&__mark-item
+		position: relative
+		border: 1px solid $dark25
+		border-radius: 4px
+		display: inline-block
+		width: 20px
+		height: 20px
+		vertical-align: middle
+		margin-right: 10px
+		transition: all 1s ease
+		&:after
+			content: ''
+			opacity: 0
+			transform: rotate(-45deg) scale(0)
+			height: 4px
+			width: 6px
+			border-color: transparent
+			border-style: solid
+			border-image: $arrow_gradient
+			border-image-slice: 1
+			border-width: 0 0 3px 3px
+			position: absolute
+			left: 28.5%
+			top: 27%
+	&__input-item
+		position: absolute
+		visibility: hidden
+		&:hover + .expandable-checkbox-list__mark-item 	
+			border-color: $purple
+		&:checked + .expandable-checkbox-list__mark-item 	
+			border-color: $purple
+			&:after
+				transform: rotate(-45deg) scale(1)
+				opacity: 1
+				
+			
