@@ -1,11 +1,12 @@
-.expandable-checkbox-list
+.checkbox-list
 	width: 100%
+	.expandable-checkbox-list &__title-block
+		cursor: pointer
 	&__title-block
 		display: flex
 		justify-content: space-between
 		width: 100%
-		margin-bottom: 5px
-		cursor: pointer
+		padding-bottom: 6px
 	&__title
 		$fontH3()
 	&__arrow-wrap
@@ -16,17 +17,28 @@
 		transition: all 1s ease
 	&__arrow-svg_active
 		transform: rotate(180deg)
-	&__list-wrapper
+	.expandable-checkbox-list &__list-wrapper
 		display: none
 	&__list-item
 		margin-top: 11px
 	&__label-item
 		cursor: pointer
-		margin-top: 9px
 		color: $dark50
 		font-size: 14px
+		display: flex
+		align-items: center
 	&__content-item
-		vertical-align: middle
+		width: 100%
+	&__content-item-title
+		font-weight: bold
+		font-size: 14px
+		line-height: 16px
+		color: $dark75
+		margin-bottom: 5px
+	&__content-item-descr
+		font-size: 12px
+		line-height: 14px
+		color: $dark50
 	&__mark-item
 		position: relative
 		border: 1px solid $dark25
@@ -54,9 +66,9 @@
 	&__input-item
 		position: absolute
 		visibility: hidden
-		&:hover + .expandable-checkbox-list__mark-item 	
+		&:hover + .checkbox-list__mark-item 	
 			border-color: $purple
-		&:checked + .expandable-checkbox-list__mark-item 	
+		&:checked + .checkbox-list__mark-item 	
 			border-color: $purple
 			&:after
 				transform: rotate(-45deg) scale(1)

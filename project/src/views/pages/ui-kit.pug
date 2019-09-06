@@ -6,7 +6,7 @@ block content
 
 	include ../../blocks/text-field/text-field
 	include ../../blocks/dropdown/dropdown
-	include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
+	include ../../blocks/checkbox-list/checkbox-list
 
 	section.colors-fonts.uikit-section
 		.wrapper
@@ -75,7 +75,13 @@ block content
 					.dropdown-wrapper
 						+dropdown-roomsCounter('Dropdown')
 					.checkbox-list-wrapper
-						+expandable-checkbox-list('Expandable checkbox list', ['Завтрак', 'Письменный стол',
+						+checkbox-list({label: 'Checkbox list'}, ['Можно курить', 'Можно с питомцами', 
+						'Можно пригласить гостей (до 10 человек)'])
+					.expandable-checkbox-list-wrapper
+						+checkbox-list({label: 'Expandable checkbox list', expandable: true}, ['Завтрак', 'Письменный стол',
 						'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь'])
+					.rich-checkbox-list-wrapper
+						+checkbox-list({label: 'Rich checkbox list', rich: true}, [['Широкий коридор', 'Ширина коридоров в номере не менее 91 см.'], 
+						['Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.']])
 				.form-elems__col
 				.form-elems__col

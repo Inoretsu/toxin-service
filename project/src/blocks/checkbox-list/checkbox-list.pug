@@ -1,0 +1,21 @@
+mixin checkbox-list(settings, list)
+	.checkbox-list(class= settings.expandable ? 'expandable-checkbox-list' : '')
+		.checkbox-list__title-block
+			p.checkbox-list__title=settings.label
+			if settings.expandable
+				.checkbox-list__arrow-wrap
+					img.checkbox-list__arrow-svg(src='../../assets/img/list_arrow.svg', alt='List arrow')
+		ul.checkbox-list__list-wrapper
+			each item in list
+				li.checkbox-list__list-item
+					label.checkbox-list__label-item
+						input.checkbox-list__input-item(type='checkbox' name=item)
+						span.checkbox-list__mark-item
+						.checkbox-list__content-item
+							if settings.rich
+								.checkbox-list__content-item-title=item[0]
+								.checkbox-list__content-item-descr=item[1]
+							else
+								| #{item}
+								
+						
