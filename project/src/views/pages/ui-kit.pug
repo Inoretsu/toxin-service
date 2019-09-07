@@ -9,6 +9,7 @@ block content
 	include ../../blocks/checkbox-list/checkbox-list
 	include ../../blocks/bullet-list/bullet-list
 	include ../../blocks/radio-buttons/radio-buttons
+	include ../../blocks/toggle-button/toggle-button
 
 	section.colors-fonts.uikit-section
 		.wrapper
@@ -87,8 +88,10 @@ block content
 						['Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.']])
 					.bullet-list-wrapper
 						+bullet-list('Bullet list', ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 
-						'Время прибытия — после 13:00,а выезд до 12:00'])
+						'Время прибытия — после 13:00, а выезд до 12:00'])
 					.radio-buttons-wrapper
 						+radio-buttons('Radio buttons', ['Мужчина', 'Женщина'])
+					.toggle-button-wrapper
+						+toggle-button('Toggle', 'Получать спецпредложения')
 				.form-elems__col
 				.form-elems__col

@@ -1,0 +1,37 @@
+.toggle-button
+	&__main-title
+		$fontH3()
+		margin-bottom: 16px
+	&__btn
+		position: relative
+		cursor: pointer
+		display: inline-flex
+		align-items: center
+	&__btn-input
+		opacity: 0
+		position: absolute
+		&:checked + .toggle-button__round-slider
+			border-color: $purple
+			&:before
+				transform: translateX(18px)
+				background-image: $arrow_gradient
+	&__btn-content
+		margin-left: 50px
+		color: $dark75
+	&__round-slider
+		width: 40px
+		height: 20px
+		border: 1px solid $dark25
+		border-radius: 10px
+		transition: all .5s ease
+		position: absolute
+		&:before
+			position: absolute
+			content: ""
+			height: 12px
+			width: 12px
+			border-radius: 100%
+			left: 4px
+			bottom: 3px
+			background-color: $dark25
+			transition: all .5s ease

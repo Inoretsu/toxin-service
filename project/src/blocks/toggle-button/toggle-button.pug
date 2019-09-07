@@ -1,0 +1,10 @@
+//- TODO:
+//- 1. Для всех инпутов добавить обязательные атрибуты и их ввод через миксин
+
+mixin toggle-button(label, content)
+	.toggle-button
+		.toggle-button__main-title=label
+		label.toggle-button__btn
+			input.toggle-button__btn-input(type='checkbox')
+			span.toggle-button__round-slider 
+			p.toggle-button__btn-content=content

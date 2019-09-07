@@ -5,11 +5,12 @@
 	&__item
 		display: inline-block
 		line-height: 18px
-		color: $dark50
 		cursor: pointer
 		margin-right: 20px
 		&-content
 			display: inline
+			transition: all .5s ease
+			color: $dark75
 		&-input
 			position: absolute
 			visibility: hidden
@@ -38,8 +39,8 @@
 				transition: all 0.5s ease
 				background-image: $arrow_gradient
 				position: absolute
-				left: 20%
-				top: 20%
+				left: 3px
+				top: 3px
 				width: 12px
 				height: 12px
 				border-radius: 100%
