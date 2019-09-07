@@ -1,0 +1,9 @@
+mixin radio-buttons(label, list)
+	.radio-buttons
+		.radio-buttons__main-title=label
+		ul.radio-buttons__items
+			each item in list
+				label.radio-buttons__item
+					input.radio-buttons__item-input(type='radio', name='radio-group')
+					span.radio-buttons__item-mark
+					p.radio-buttons__item-content=item

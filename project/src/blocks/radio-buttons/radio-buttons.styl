@@ -1,0 +1,50 @@
+.radio-buttons
+	&__main-title
+		$fontH3()
+		margin-bottom: 16px
+	&__item
+		display: inline-block
+		line-height: 18px
+		color: $dark50
+		cursor: pointer
+		margin-right: 20px
+		&-content
+			display: inline
+		&-input
+			position: absolute
+			visibility: hidden
+		&-input
+			position: absolute
+			visibility: hidden
+			&:hover + .radio-buttons__item-mark
+				border-color: $purple
+			&:checked + .radio-buttons__item-mark
+				border-color: $purple
+				&:after
+					opacity: 1
+					transform: scale(1)
+		&-mark
+			position: relative
+			border: 1px solid $dark25
+			border-radius: 100%
+			display: inline-block
+			width: 20px
+			height: 20px
+			vertical-align: middle
+			margin-right: 9px
+			transition: all 0.5s ease
+			&:after
+				content: ''
+				transition: all 0.5s ease
+				background-image: $arrow_gradient
+				position: absolute
+				left: 20%
+				top: 20%
+				width: 12px
+				height: 12px
+				border-radius: 100%
+				opacity: 0
+				transform: scale(0)
+				
+			
+						
