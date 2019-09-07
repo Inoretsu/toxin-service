@@ -13,8 +13,8 @@ mixin checkbox-list(settings, list)
 						span.checkbox-list__mark-item
 						.checkbox-list__content-item
 							if settings.rich
-								.checkbox-list__content-item-title=item[0]
-								.checkbox-list__content-item-descr=item[1]
+								p.checkbox-list__content-item-title=item[0]
+								p.checkbox-list__content-item-descr=item[1]
 							else
 								| #{item}
 								

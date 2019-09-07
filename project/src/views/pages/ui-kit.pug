@@ -7,6 +7,8 @@ block content
 	include ../../blocks/text-field/text-field
 	include ../../blocks/dropdown/dropdown
 	include ../../blocks/checkbox-list/checkbox-list
+	include ../../blocks/bullet-list/bullet-list
+	include ../../blocks/radio-buttons/radio-buttons
 
 	section.colors-fonts.uikit-section
 		.wrapper
@@ -83,5 +85,8 @@ block content
 					.rich-checkbox-list-wrapper
 						+checkbox-list({label: 'Rich checkbox list', rich: true}, [['Широкий коридор', 'Ширина коридоров в номере не менее 91 см.'], 
 						['Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.']])
+					.bullet-list-wrapper
+						+bullet-list('Bullet list', ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 
+						'Время прибытия — после 13:00,а выезд до 12:00'])
 				.form-elems__col
 				.form-elems__col

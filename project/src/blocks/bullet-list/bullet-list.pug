@@ -1,0 +1,7 @@
+mixin bullet-list(label, list)
+	.bullet-list
+		.bullet-list__label=label
+		ul.bullet-list__items
+			each item in list
+				li.bullet-list__item
+					p.bullet-list__item-text=item
